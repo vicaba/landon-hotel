@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<nav>
+    <ol>
+        <li><a href="#" th:href="@{/rooms}">Rooms</a></li>
+        <li><a href="/reservations">Reservations</a></li>
+        <li><a href="/guests">Guests</a></li>
+    </ol>
+</nav>
+
+<h1>Rooms</h1>
+
+<table>
+    <tr>
+        <th>Room Number</th>
+        <th>Bed Info</th>
+    </tr>
+    <tr th:each="room : ${rooms}">
+        <td th:text="${room.roomNumber}">Room Number</td>
+        <td th:text="${room.bedInfo}">Bed Info</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
